@@ -19,8 +19,8 @@ maria.ElementView.subclass(contactsApp, 'PersonView', {
             var firstName = model.getFirstName();
             var lastName = model.getLastName();
             // use the outlets
-            this.getFirstName().innerHTML = firstName;
-            this.getLastNames().forEach(function(element) {
+            this.findFirstName().innerHTML = firstName;
+            this.findLastNames().forEach(function(element) {
                 element.innerHTML = lastName;
             });
         }
@@ -38,15 +38,15 @@ maria.ElementView.subclass(contactsApp, 'PersonView', {
             var firstName = model.getFirstName();
             var lastName = model.getLastName();
             // use the outlets
-            this.getFirstName().innerHTML = firstName;
-            this.getLastNames().forEach(function(element) {
+            this.findFirstName().innerHTML = firstName;
+            this.findLastNames().forEach(function(element) {
                 element.innerHTML = lastName;
             });
         },
-        getFirstName: function() {
+        findFirstName: function() {
             return this.find('.firstName');
         },
-        getLastNames: function() {
+        findLastNames: function() {
             return this.findAll('.lastNames');
         }
     }

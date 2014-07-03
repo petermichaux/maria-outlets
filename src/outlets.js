@@ -15,7 +15,7 @@
                 for (var key in outlets) {
                     if (Object.prototype.hasOwnProperty.call(outlets, key)) {
 
-                        var methodName = 'get' + capitalize(key.replace(/\[\]$/, ''));
+                        var methodName = 'find' + capitalize(key.replace(/\[\]$/, ''));
                         var finder = /\[\]$/.test(key) ? 'findAll' : 'find';
                         var selector = outlets[key];
 

@@ -20,16 +20,16 @@
                 }
             });
 
-            assert.isFunction(ns.PersonView.prototype.getFirstName);
-            assert.isFunction(ns.PersonView.prototype.getLastNames);
+            assert.isFunction(ns.PersonView.prototype.findFirstName);
+            assert.isFunction(ns.PersonView.prototype.findLastNames);
 
             var personView = new ns.PersonView();
 
-            assert.same(personView.getFirstName().innerHTML, 'first');
-            assert.isArray(personView.getLastNames());
-            assert.same(personView.getLastNames().length, 2);
-            assert.same(personView.getLastNames()[0].innerHTML, 'last');
-            assert.same(personView.getLastNames()[1].innerHTML, 'other last');
+            assert.same(personView.findFirstName().innerHTML, 'first');
+            assert.isArray(personView.findLastNames());
+            assert.same(personView.findLastNames().length, 2);
+            assert.same(personView.findLastNames()[0].innerHTML, 'last');
+            assert.same(personView.findLastNames()[1].innerHTML, 'other last');
         }
 
     });
